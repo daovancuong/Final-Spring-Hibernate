@@ -36,11 +36,12 @@ public class SocialConfig implements SocialConfigurer {
 
 	public void addConnectionFactories(ConnectionFactoryConfigurer cfConfig, Environment env) {
 
-		FacebookConnectionFactory ffactory = new FacebookConnectionFactory("1135897716432797",
-				"d8ce4415657c73ab1dafbee720c9ae11");
-
-		ffactory.setScope("public_profile,email");
-		cfConfig.addConnectionFactory(ffactory);
+	      FacebookConnectionFactory ffactory = new FacebookConnectionFactory(//
+	              env.getProperty("facebook.app.id"), //
+	              env.getProperty("facebook.app.secret"));
+	      
+	      ffactory.setScope(env.getProperty("facebook.scope"));
+	      cfConfig.addConnectionFactory(ffactory);
 	}
 
 	public UserIdSource getUserIdSource() {

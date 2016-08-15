@@ -22,11 +22,16 @@
     
     <h1>Register</h1>
  
-    <form:form modelAttribute="myForm" method="POST">
+    <form:form modelAttribute="user" method="POST">
         <form:hidden path="id" />
         <form:hidden path="signInProvider" />  
         <table border="0">
-            
+             
+            <tr>
+                <td>Name</td>
+                <td><form:input path="name" /></td>
+                <td><form:errors path="name" class="error-message" /></td>
+            </tr>
             <tr>
                 <td>Email</td>
                 <td><form:input path="email" /></td>

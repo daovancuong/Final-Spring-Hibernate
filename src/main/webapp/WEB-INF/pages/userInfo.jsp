@@ -12,7 +12,7 @@
     
     <h1>User Info Page</h1>
     <h3>Welcome : ${pageContext.request.userPrincipal.name}</h3>
-    <a href="${pageContext.request.contextPath}/logout">Logout</a>
+    
     
  
 </body>

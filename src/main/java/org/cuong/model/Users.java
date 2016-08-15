@@ -33,8 +33,8 @@ import org.cuong.validator.isValidName;
 public class Users implements java.io.Serializable {
 
 	private String id;
-	@Size(min = 5, max = 10)
-	@isValidName(listName = "cuong")
+//	@Size(min = 5, max = 10)
+//	@isValidName(listName = "cuong")
 	private String name;
 	private String email;
 	private String address;
